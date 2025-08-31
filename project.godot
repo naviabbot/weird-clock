@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Weird Clock"
 config/description="A weird clock that tells you the time and date in .beats and Stardate respectively."
-config/version="1.0.2"
+config/version="1.0.3"
 run/main_scene="uid://d3pdbwc007amr"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
