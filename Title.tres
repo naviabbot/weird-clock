@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dws6urercqena"]
+
+[ext_resource type="FontFile" uid="uid://bqqwj6y205r7s" path="res://Montserrat-Regular.otf" id="1_ahpoy"]
+
+[resource]
+font = ExtResource("1_ahpoy")
+font_size = 52
+font_color = Color(0.683676, 0.683676, 0, 1)

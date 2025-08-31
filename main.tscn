@@ -1,0 +1,196 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3pdbwc007amr"]
+
+[ext_resource type="LabelSettings" uid="uid://dws6urercqena" path="res://Title.tres" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bc08dvpbhmncl" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="LabelSettings" uid="uid://daivqqhdt4006" path="res://Text.tres" id="2_h2yge"]
+[ext_resource type="FontFile" uid="uid://bqqwj6y205r7s" path="res://Montserrat-Regular.otf" id="4_1bvp3"]
+[ext_resource type="LabelSettings" uid="uid://cp7rg0thy4unk" path="res://Sublabels.tres" id="5_lquwl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font = ExtResource("4_1bvp3")
+font_size = 21
+font_color = Color(0.774446, 0.774446, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+process_mode = 3
+process_priority = 1
+process_thread_group = 1
+process_thread_group_order = 1
+process_thread_messages = 1
+script = ExtResource("1_h2yge")
+metadata/_edit_vertical_guides_ = [250.0]
+metadata/_edit_horizontal_guides_ = [650.0]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 500.0
+offset_bottom = 649.0
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 90.0
+text = "A Weird Clock"
+label_settings = ExtResource("1_0xm2m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 71.0
+offset_right = 469.0
+offset_bottom = 94.0
+text = "For Supergeeks and Ultranerds who love this sort of thing."
+label_settings = ExtResource("2_h2yge")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Beats" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 148.0
+offset_right = 471.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0.682353, 0.682353, 0, 1)
+theme_override_fonts/font = ExtResource("4_1bvp3")
+theme_override_font_sizes/font_size = 52
+text = "@000"
+flat = true
+
+[node name="Stardate" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 372.0
+offset_right = 472.0
+offset_bottom = 437.0
+text = "XXXX.YYY"
+label_settings = ExtResource("1_0xm2m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="beatTai" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 247.0
+offset_right = 472.0
+offset_bottom = 312.0
+theme_override_colors/font_color = Color(0.682353, 0.682353, 0, 1)
+theme_override_fonts/font = ExtResource("4_1bvp3")
+theme_override_font_sizes/font_size = 52
+text = ":000"
+flat = true
+
+[node name="TimeLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 118.0
+offset_right = 393.0
+offset_bottom = 145.0
+text = "The Internet Time (.beat) Is:"
+label_settings = SubResource("LabelSettings_lquwl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StardateLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 336.0
+offset_right = 358.0
+offset_bottom = 363.0
+text = "The Stardate Is:"
+label_settings = SubResource("LabelSettings_lquwl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BeatTaiLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 222.0
+offset_right = 469.0
+offset_bottom = 245.0
+text = "For those of you who prefer a more standard time (.tai)"
+label_settings = ExtResource("2_h2yge")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DateTime" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 557.0
+offset_right = 371.0
+offset_bottom = 622.0
+text = "DateTime"
+label_settings = ExtResource("5_lquwl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="About_dotBeats" type="Popup" parent="Panel"]
+position = Vector2i(10, 173)
+size = Vector2i(484, 312)
+
+[node name="adb_title" type="Label" parent="Panel/About_dotBeats"]
+offset_left = 72.0
+offset_top = 3.0
+offset_right = 408.0
+offset_bottom = 68.0
+text = "About .beats"
+label_settings = ExtResource("1_0xm2m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="adb_message" type="Label" parent="Panel/About_dotBeats"]
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 479.0
+offset_bottom = 303.0
+text = ".beats, or Swatch Internet Time, was created by Swatch, in an 
+attempt to unite the internet regarding the timing of things
+online.
+
+To facilitate this, Swatch used UTC+1 as the standard for 
+Biel Mean Time, a new timezone to facilitate the concept of
+.beats.
+
+The notable adopters of .beat time has been CNN, Sega (for
+Phantasy Star Online), and ICQ. In recent years,
+there has been a cultural return to .beats as a means of
+coordinating activities online."
+label_settings = ExtResource("2_h2yge")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="About_dotTai" type="Popup" parent="Panel"]
+auto_translate_mode = 1
+position = Vector2i(0, 150)
+size = Vector2i(741, 273)
+
+[node name="adt_title" type="Label" parent="Panel/About_dotTai"]
+offset_left = 81.0
+offset_top = 4.0
+offset_right = 417.0
+offset_bottom = 69.0
+text = "About .tai"
+label_settings = ExtResource("1_0xm2m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="adt_message" type="Label" parent="Panel/About_dotTai"]
+offset_left = 7.0
+offset_top = 98.0
+offset_right = 491.0
+offset_bottom = 277.0
+text = "beatTAI, or .tai, is an attempt to take .beats, and instead of  using UTC+1 as the 
+basis of the time format, use UTC proper.
+
+Like .beats, .tai is designated to coordinate things online 
+users to best synchronize things together on a decimal basis.
+
+The idea behind .tai was proposed by Github user B4UDW3RK5"
+label_settings = ExtResource("2_h2yge")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeCSharp" type="Node" parent="."]
+
+[connection signal="button_up" from="Panel/Beats" to="." method="_on_beats_button_up"]
+[connection signal="button_up" from="Panel/beatTai" to="." method="_on_beat_tai_button_up"]
