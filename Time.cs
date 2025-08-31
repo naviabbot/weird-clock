@@ -7,10 +7,6 @@ public partial class Time : Node
 		string beats = Math.Floor((DateTime.UtcNow.AddHours(1).TimeOfDay.TotalMilliseconds / 86400d)).ToString();
 		return beats;
 	}
-	public string beatTaiTime(){
-		string beatTai = Math.Floor((DateTime.UtcNow.TimeOfDay.TotalMilliseconds / 86400d)).ToString();
-		return beatTai;
-	}
 	public string starDate(){
 		string stardate;
 		DateTime current = DateTime.Now;
