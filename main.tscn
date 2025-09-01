@@ -57,16 +57,17 @@ theme_override_font_sizes/font_size = 52
 text = "@000"
 flat = true
 
-[node name="Stardate" type="Label" parent="Panel"]
+[node name="Stardate" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 28.0
 offset_top = 372.0
 offset_right = 472.0
 offset_bottom = 437.0
+theme_override_colors/font_color = Color(0.682353, 0.682353, 0, 1)
+theme_override_fonts/font = ExtResource("4_1bvp3")
+theme_override_font_sizes/font_size = 52
 text = "XXXX.YYY"
-label_settings = ExtResource("1_0xm2m")
-horizontal_alignment = 1
-vertical_alignment = 1
+flat = true
 
 [node name="TimeLabel" type="Label" parent="Panel"]
 layout_mode = 0
@@ -132,6 +133,34 @@ The notable adopters of .beat time has been CNN, Sega (for
 Phantasy Star Online), and ICQ. In recent years,
 there has been a cultural return to .beats as a means of
 coordinating activities online."
+label_settings = ExtResource("2_h2yge")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="About_stardate" type="Popup" parent="Panel"]
+position = Vector2i(0, 180)
+size = Vector2i(541, 276)
+
+[node name="About_sdtitle" type="Label" parent="Panel/About_stardate"]
+offset_left = 40.0
+offset_top = 24.0
+offset_right = 458.0
+offset_bottom = 89.0
+text = "About Stardate"
+label_settings = ExtResource("1_0xm2m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="about_sdtext" type="Label" parent="Panel/About_stardate"]
+offset_top = 120.0
+offset_right = 494.0
+offset_bottom = 231.0
+text = "The Andromeda-Corvera Stardate Format was created by 
+Arynnia-Celeste Andromeda and Jaida Corvera, after several years of talking 
+Trek. The two of them, while attempting to understand the timeline came
+up with a format for using milliyears to demarkate a proper stardate
+to unify their timeline. As this is based off of UTC, it can be a way to track
+the calendar year."
 label_settings = ExtResource("2_h2yge")
 horizontal_alignment = 1
 vertical_alignment = 1
