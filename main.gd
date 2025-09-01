@@ -23,3 +23,6 @@ func _get_da_datetime(datetime := Time.get_datetime_string_from_system(false,tru
 
 func _on_beats_button_up() -> void:
 	$Panel/About_dotBeats.show()
+
+func _on_stardate_button_up() -> void:
+	$Panel/About_stardate.show()
