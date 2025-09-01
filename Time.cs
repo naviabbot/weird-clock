@@ -9,7 +9,7 @@ public partial class Time : Node
 	}
 	public string starDate(){
 		string stardate;
-		DateTime current = DateTime.Now;
+		DateTime current = DateTime.UtcNow;
 		float fraction = 1440 * (current.DayOfYear - 1) + 60 * current.Hour + current.Minute + (current.Second / 60);
 		if (current.Year % 4 == 0 && (current.Year % 100 != 0 || current.Year % 400 == 0)) fraction = fraction / 527.04f;
 		else fraction = fraction / 525.6f;
